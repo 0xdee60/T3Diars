@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewData["Title"] = "DetalleRutina";
+}
+
+<h1>DetalleRutina</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nombre del ejercicio</th>
+
+            <th>Tiempo</th>
+
+            <th>Video demostrativo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in ViewBag.Ejercicios)
+        {
+            <tr>
+                <td>@item.ejercicio.nombre</td>
+                <td>@item.tiempo segundos</td>
+                <td>
+                    <a href="@item.ejercicio.linkVideo">Ver video</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

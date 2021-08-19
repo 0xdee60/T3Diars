@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<form action="/Usuario/Create" method="post">
+
+    <label>Nombres y apellidos</label>
+    <input type="text" name="nombreCompleto" />
+    <br />
+    <label>Usuario</label>
+    <input type="text" name="usuario" />
+    <br /> <label>Password</label>
+    <input type="password" name="passwd" />
+    <br /><br />
+    <button type="submit">Guardar</button>
+    <a href="/Home/Index" class="btn btn-danger">Cancelar</a>
+</form>

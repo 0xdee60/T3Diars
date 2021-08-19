@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewData["Title"] = "CrearRutina";
+}
+
+<h1>CrearRutina</h1>
+
+<form action="/Usuario/CrearRutina" method="post">
+    <label>Nombre de la rutina</label>
+    <input type="text" name="nombre" />
+    <br />
+    <label>Tipo</label>
+    <select name="tipo">
+        <option value="Principiante">Principiante</option>
+        <option value="Intermedio">Intermedio</option>
+        <option value="Avanzado">Avanzado</option>
+    </select>
+    <br /><br />
+    <button type="submit">Crear</button>
+</form>

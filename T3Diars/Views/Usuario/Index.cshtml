@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+<a href="/Usuario/CrearRutina">Crear rutina</a>
+<h1>Index</h1>
+@if (ViewBag.Rutinas.Count != 0)
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre de la rutina</th>
+                <th>Tipo de rutina</th>
+
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in ViewBag.Rutinas)
+            {
+                <tr>
+                    <td>@item.nombre</td>
+                    <td>@item.tipo</td>
+                    <td>
+                        <a href="/Usuario/DetalleRutina?idRutina=@item.idRutina">Ver detalles</a>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+}
+else
+{
+    <h2>No tiene rutinas creadas</h2>
+}
